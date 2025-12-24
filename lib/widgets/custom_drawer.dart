@@ -1,5 +1,5 @@
 import 'package:app_adaptive/models/model_drawer_item.dart';
-import 'package:app_adaptive/widgets/custom_drawer_item.dart';
+import 'package:app_adaptive/widgets/custom_drawer_item_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -18,16 +18,12 @@ class CustomDrawer extends StatelessWidget {
       child: Column(
         children: [
           DrawerHeader(child: Icon(FontAwesomeIcons.solidHeart, size: 48)),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: items.length
-            ,itemBuilder: (context, index){
-            return CustomDrawerItem(modelDrawerItem: items[index],);
-          })
+          CustomDrawerItemListView(items: items)
         ],
       ),
     );
   }
 }
+
+
 
