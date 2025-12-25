@@ -1,3 +1,4 @@
+import 'package:app_adaptive/widgets/custom_item_two.dart';
 import 'package:flutter/material.dart';
 
 class CustomSliverList extends StatelessWidget {
@@ -17,17 +18,4 @@ class CustomSliverList extends StatelessWidget {
   }
 }
 
-class CustomItemTwo extends StatelessWidget {
-  const CustomItemTwo({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 60,
-      decoration: BoxDecoration(
-        color: Color(0xffececec),
-        borderRadius: BorderRadius.circular(16),
-      ),
-    );
-  }
-}
